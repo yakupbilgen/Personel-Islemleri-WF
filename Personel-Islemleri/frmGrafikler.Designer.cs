@@ -60,9 +60,8 @@
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.xuıClock1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "frmGrafikler";
-			this.Text = "frmGrafikler";
+			this.Text = "Grafikler";
 			this.ResumeLayout(false);
 
 		}
