@@ -65,15 +65,17 @@
 			this.personelMaasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.personelDurumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.personelMeslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tBLPersonelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.dBPersonelDataSet1 = new Personel_Islemleri.DBPersonelDataSet1();
 			this.tBLPersonelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dBPersonelDataSet = new Personel_Islemleri.DBPersonelDataSet();
-			this.tBLPersonelTableAdapter = new Personel_Islemleri.DBPersonelDataSetTableAdapters.TBLPersonelTableAdapter();
+			this.tBLPersonelTableAdapter1 = new Personel_Islemleri.DBPersonelDataSet1TableAdapters.TBLPersonelTableAdapter();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKayitlar)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBLPersonelBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dBPersonelDataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tBLPersonelBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dBPersonelDataSet)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -475,7 +477,7 @@
             this.personelMaasDataGridViewTextBoxColumn,
             this.personelDurumDataGridViewCheckBoxColumn,
             this.personelMeslekDataGridViewTextBoxColumn});
-			this.dgvKayitlar.DataSource = this.tBLPersonelBindingSource;
+			this.dgvKayitlar.DataSource = this.tBLPersonelBindingSource1;
 			this.dgvKayitlar.Location = new System.Drawing.Point(11, 19);
 			this.dgvKayitlar.Name = "dgvKayitlar";
 			this.dgvKayitlar.Size = new System.Drawing.Size(763, 208);
@@ -525,19 +527,19 @@
 			this.personelMeslekDataGridViewTextBoxColumn.HeaderText = "PersonelMeslek";
 			this.personelMeslekDataGridViewTextBoxColumn.Name = "personelMeslekDataGridViewTextBoxColumn";
 			// 
-			// tBLPersonelBindingSource
+			// tBLPersonelBindingSource1
 			// 
-			this.tBLPersonelBindingSource.DataMember = "TBLPersonel";
-			this.tBLPersonelBindingSource.DataSource = this.dBPersonelDataSet;
+			this.tBLPersonelBindingSource1.DataMember = "TBLPersonel";
+			this.tBLPersonelBindingSource1.DataSource = this.dBPersonelDataSet1;
 			// 
-			// dBPersonelDataSet
+			// dBPersonelDataSet1
 			// 
-			this.dBPersonelDataSet.DataSetName = "DBPersonelDataSet";
-			this.dBPersonelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			this.dBPersonelDataSet1.DataSetName = "DBPersonelDataSet1";
+			this.dBPersonelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
-			// tBLPersonelTableAdapter
+			// tBLPersonelTableAdapter1
 			// 
-			this.tBLPersonelTableAdapter.ClearBeforeFill = true;
+			this.tBLPersonelTableAdapter1.ClearBeforeFill = true;
 			// 
 			// frmPersonel
 			// 
@@ -556,8 +558,9 @@
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvKayitlar)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tBLPersonelBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dBPersonelDataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tBLPersonelBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dBPersonelDataSet)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -590,9 +593,7 @@
 		private XanderUI.XUIButton xBtnKaydet;
 		private XanderUI.XUIButton xBtnListele;
 		private System.Windows.Forms.DataGridView dgvKayitlar;
-		private DBPersonelDataSet dBPersonelDataSet;
 		private System.Windows.Forms.BindingSource tBLPersonelBindingSource;
-		private DBPersonelDataSetTableAdapters.TBLPersonelTableAdapter tBLPersonelTableAdapter;
 		private System.Windows.Forms.DataGridViewTextBoxColumn personelidDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn personelAdDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn personelSoyadDataGridViewTextBoxColumn;
@@ -602,6 +603,9 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn personelMeslekDataGridViewTextBoxColumn;
 		private XanderUI.XUIButton xBtnCikis;
 		private System.Windows.Forms.Label lblDurum;
+		private DBPersonelDataSet1 dBPersonelDataSet1;
+		private System.Windows.Forms.BindingSource tBLPersonelBindingSource1;
+		private DBPersonelDataSet1TableAdapters.TBLPersonelTableAdapter tBLPersonelTableAdapter1;
 	}
 }
 

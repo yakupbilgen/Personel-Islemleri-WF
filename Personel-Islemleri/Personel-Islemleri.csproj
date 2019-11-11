@@ -51,10 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBPersonelDataSet.Designer.cs">
+    <Compile Include="DBPersonelDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBPersonelDataSet.xsd</DependentUpon>
+      <DependentUpon>DBPersonelDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPersonelIslemleri.cs">
       <SubType>Form</SubType>
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersonelIslemleri.resx">
       <DependentUpon>frmPersonelIslemleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,16 +103,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DBPersonelDataSet.xsc">
-      <DependentUpon>DBPersonelDataSet.xsd</DependentUpon>
+    <None Include="DBPersonelDataSet1.xsc">
+      <DependentUpon>DBPersonelDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DBPersonelDataSet.xsd">
+    <None Include="DBPersonelDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBPersonelDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBPersonelDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBPersonelDataSet.xss">
-      <DependentUpon>DBPersonelDataSet.xsd</DependentUpon>
+    <None Include="DBPersonelDataSet1.xss">
+      <DependentUpon>DBPersonelDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -19,7 +19,7 @@ namespace Personel_Islemleri
 		}
 		public void Listele()
 		{
-			this.tBLPersonelTableAdapter.Fill(this.dBPersonelDataSet.TBLPersonel);
+			this.tBLPersonelTableAdapter1.Fill(this.dBPersonelDataSet1.TBLPersonel);
 		}
 		public void Temizle()
 		{
@@ -32,11 +32,11 @@ namespace Personel_Islemleri
 			radioEvli.Checked = false;
 			radioEvli.Checked = false;
 		}
-		SqlConnection ctxConnection = new SqlConnection("Data Source=DESKTOP-7IV832G\\MSSQLSERVER01;Initial Catalog=DBPersonel;Integrated Security=True");
+		SqlConnection ctxConnection = new SqlConnection("Data Source=DESKTOP-LU5VIM4\\MSSQLSERVER1;Initial Catalog=DBPersonel;Integrated Security=True");
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			// TODO: This line of code loads data into the 'dBPersonelDataSet.TBLPersonel' table. You can move, or remove it, as needed.
-			this.tBLPersonelTableAdapter.Fill(this.dBPersonelDataSet.TBLPersonel);
+			// TODO: This line of code loads data into the 'dBPersonelDataSet1.TBLPersonel' table. You can move, or remove it, as needed.
+			this.tBLPersonelTableAdapter1.Fill(this.dBPersonelDataSet1.TBLPersonel);
 			lblDurum.Visible = true;
 		}
 
@@ -51,21 +51,28 @@ namespace Personel_Islemleri
 
 		private void xBtnKaydet_Click(object sender, EventArgs e)
 		{
-			ctxConnection.Open();
-			SqlCommand insert = new SqlCommand("insert into TBLPersonel " +
-				"(PersonelAd,PersonelSoyad,PersonelSehir,PersonelMaas,PersonelDurum,PersonelMeslek) " +
-				"values (@item1,@item2,@item3,@item4,@item5,@item6)", ctxConnection);
-			insert.Parameters.AddWithValue("@item1", txtAd.Text);
-			insert.Parameters.AddWithValue("@item2", txtSoyad.Text);
-			insert.Parameters.AddWithValue("@item3", cmbSehir.Text);
-			insert.Parameters.AddWithValue("@item4", txtMaas.Text);
-			insert.Parameters.AddWithValue("@item5", lblDurum.Text);
-			insert.Parameters.AddWithValue("@item6", txtMeslek.Text);
-			insert.ExecuteNonQuery();
-			ctxConnection.Close();
-			Listele();
-			Temizle();
-			MessageBox.Show("Kayıt başarıyla eklendi!", "Uyarı");
+			if (ctxConnection.State != ConnectionState.Closed)
+			{
+				ctxConnection.Close();
+			}
+			else
+			{
+				ctxConnection.Open();
+				SqlCommand insert = new SqlCommand("insert into TBLPersonel " +
+					"(PersonelAd,PersonelSoyad,PersonelSehir,PersonelMaas,PersonelDurum,PersonelMeslek) " +
+					"values (@item1,@item2,@item3,@item4,@item5,@item6)", ctxConnection);
+				insert.Parameters.AddWithValue("@item1", txtAd.Text);
+				insert.Parameters.AddWithValue("@item2", txtSoyad.Text);
+				insert.Parameters.AddWithValue("@item3", cmbSehir.Text);
+				insert.Parameters.AddWithValue("@item4", txtMaas.Text);
+				insert.Parameters.AddWithValue("@item5", lblDurum.Text);
+				insert.Parameters.AddWithValue("@item6", txtMeslek.Text);
+				insert.ExecuteNonQuery();
+				ctxConnection.Close();
+				Listele();
+				Temizle();
+				MessageBox.Show("Kayıt başarıyla eklendi!", "Uyarı");
+			}
 		}
 
 		private void radioEvli_Click(object sender, EventArgs e)
@@ -159,5 +166,6 @@ namespace Personel_Islemleri
 			frmGrafikler frm = new frmGrafikler();
 			frm.Show();
 		}
+
 	}
 }

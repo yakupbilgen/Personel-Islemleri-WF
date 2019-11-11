@@ -13,7 +13,7 @@ namespace Personel_Islemleri
 {
 	public partial class frmIstatistik : Form
 	{
-		SqlConnection ctxConnection = new SqlConnection("Data Source=DESKTOP-7IV832G\\MSSQLSERVER01;Initial Catalog=DBPersonel;Integrated Security=True");
+		SqlConnection ctxConnection = new SqlConnection("Data Source=DESKTOP-LU5VIM4\\MSSQLSERVER1;Initial Catalog=DBPersonel;Integrated Security=True");
 		public frmIstatistik()
 		{
 			InitializeComponent();

@@ -28,46 +28,72 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.xuıClock1 = new XanderUI.XUIClock();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// xuıClock1
+			// chart1
 			// 
-			this.xuıClock1.CircleThickness = 6;
-			this.xuıClock1.DisplayFormat = XanderUI.XUIClock.HourFormat.TwelveHour;
-			this.xuıClock1.FilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(190)))), ((int)(((byte)(155)))));
-			this.xuıClock1.FilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-			this.xuıClock1.FilledSecondColor = System.Drawing.Color.DarkOrchid;
-			this.xuıClock1.Font = new System.Drawing.Font("Impact", 15F);
-			this.xuıClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-			this.xuıClock1.Location = new System.Drawing.Point(107, 194);
-			this.xuıClock1.Name = "xuıClock1";
-			this.xuıClock1.ShowAmPm = false;
-			this.xuıClock1.ShowHexagon = true;
-			this.xuıClock1.ShowMinutesCircle = true;
-			this.xuıClock1.ShowSecondsCircle = true;
-			this.xuıClock1.Size = new System.Drawing.Size(120, 130);
-			this.xuıClock1.TabIndex = 0;
-			this.xuıClock1.Text = "xuıClock1";
-			this.xuıClock1.UnfilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(85)))));
-			this.xuıClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-			this.xuıClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+			chartArea3.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea3);
+			legend3.Name = "Legend1";
+			this.chart1.Legends.Add(legend3);
+			this.chart1.Location = new System.Drawing.Point(12, 12);
+			this.chart1.Name = "chart1";
+			this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+			series3.ChartArea = "ChartArea1";
+			series3.Legend = "Legend1";
+			series3.Name = "Sehirler";
+			this.chart1.Series.Add(series3);
+			this.chart1.Size = new System.Drawing.Size(382, 300);
+			this.chart1.TabIndex = 0;
+			this.chart1.Text = "chart1";
+			// 
+			// chart2
+			// 
+			chartArea4.Name = "ChartArea1";
+			this.chart2.ChartAreas.Add(chartArea4);
+			legend4.Name = "Legend1";
+			this.chart2.Legends.Add(legend4);
+			this.chart2.Location = new System.Drawing.Point(423, 12);
+			this.chart2.Name = "chart2";
+			this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+			series4.ChartArea = "ChartArea1";
+			series4.Legend = "Legend1";
+			series4.Name = "Meslek-Maas";
+			this.chart2.Series.Add(series4);
+			this.chart2.Size = new System.Drawing.Size(382, 300);
+			this.chart2.TabIndex = 1;
+			this.chart2.Text = "chart2";
 			// 
 			// frmGrafikler
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.xuıClock1);
+			this.ClientSize = new System.Drawing.Size(814, 330);
+			this.Controls.Add(this.chart2);
+			this.Controls.Add(this.chart1);
 			this.Name = "frmGrafikler";
 			this.Text = "Grafikler";
+			this.Load += new System.EventHandler(this.frmGrafikler_Load);
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private XanderUI.XUIClock xuıClock1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
 	}
 }
